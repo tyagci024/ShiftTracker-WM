@@ -60,7 +60,7 @@ class LocationMonitoringService(val appContext:Context, workerParameters: Worker
         }
     }
     private fun isLocationCloseEnough(desiredLatitude: Double, desiredLongitude: Double): Boolean {
-        val tolerance = 1.6// Uygun bir tolerans değeri belirleyin
+        val tolerance = 1.6
         return userLocation?.let { location ->
             (Math.abs(desiredLatitude - location.latitude) > tolerance) &&
                     (Math.abs(desiredLongitude - location.longitude) > tolerance)
